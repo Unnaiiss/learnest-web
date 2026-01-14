@@ -6,26 +6,27 @@ import { ArrowRight } from "lucide-react";
 
 export const AboutCTA = () => {
     return (
-        <section className="py-24 px-6 relative overflow-hidden">
-            <div className="container mx-auto max-w-4xl text-center">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    className="glass-card p-12 md:p-16 rounded-3xl border border-brand-gold/20 relative"
-                >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent" />
+        <section className="py-32 px-6 relative overflow-hidden">
+            {/* Ambient Background Glow - REMOVED */}
 
-                    <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
-                        Ready to Shape the Future?
+            <div className="container mx-auto max-w-4xl text-center relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="flex flex-col items-center"
+                >
+                    <h2 className="text-5xl md:text-7xl font-heading font-bold text-white mb-8 tracking-tight">
+                        Ready to <span className="text-gradient-gold">Shape the Future?</span>
                     </h2>
-                    <p className="text-xl text-brand-gray-300 mb-10 max-w-2xl mx-auto">
+                    <p className="text-xl md:text-2xl text-brand-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
                         Join our community of innovators, learners, and visionaries.
                         Let's build something extraordinary together.
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-brand-gold text-brand-black font-bold text-lg hover:bg-brand-gold-light transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:scale-105 transform"
+                        className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-8 py-3 md:px-10 md:py-4 rounded-full bg-brand-gold text-brand-black font-bold text-base md:text-lg hover:bg-brand-gold-light transition-all shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:shadow-[0_0_60px_rgba(212,175,55,0.6)] hover:scale-105 transform"
                     >
                         Join Our Journey <ArrowRight className="w-5 h-5" />
                     </Link>

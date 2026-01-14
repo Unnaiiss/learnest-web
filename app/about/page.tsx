@@ -1,6 +1,5 @@
 import { AboutHero } from "@/components/about/AboutHero";
 import { MissionVision } from "@/components/about/MissionVision";
-import { FounderProfile } from "@/components/about/FounderProfile";
 import { TeamGrid } from "@/components/about/TeamGrid";
 import { AboutCTA } from "@/components/about/AboutCTA";
 
@@ -19,7 +18,6 @@ export default function AboutPage() {
 
             <AboutHero />
             <MissionVision />
-            <FounderProfile />
             <TeamGrid />
             <AboutCTA />
         </div>

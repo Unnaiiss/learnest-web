@@ -1,7 +1,6 @@
 import { ContactHero } from "@/components/contact/ContactHero";
 import { ContactGrid } from "@/components/contact/ContactGrid";
-import { ContactForm } from "@/components/contact/ContactForm";
-import { FounderConnect } from "@/components/contact/FounderConnect";
+import { ModernContactForm } from "@/components/contact/ModernContactForm";
 
 export const metadata = {
     title: "Contact Us | LEARNEST",
@@ -18,8 +17,11 @@ export default function ContactPage() {
 
             <ContactHero />
             <ContactGrid />
-            <ContactForm />
-            <FounderConnect />
+            <section className="py-20 px-6">
+                <div className="container mx-auto max-w-4xl glass p-6 md:p-8 rounded-2xl border border-white/10">
+                    <ModernContactForm />
+                </div>
+            </section>
         </div>
     );
 }

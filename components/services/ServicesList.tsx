@@ -50,52 +50,35 @@ export const ServicesList = () => {
                         <motion.div
                             key={service.id}
                             layout
-                            onClick={() => setSelectedId(selectedId === service.id ? null : service.id)}
                             className={`
                                 cursor-pointer group relative overflow-hidden rounded-3xl p-8 border transition-all duration-500
-                                ${selectedId === service.id
-                                    ? "bg-brand-black-secondary border-brand-gold/30 shadow-[0_0_50px_rgba(212,175,55,0.1)]"
-                                    : "glass border-transparent hover:border-brand-white/10 hover:bg-brand-white/5"
-                                }
+                                glass border-transparent hover:border-brand-white/10 hover:bg-brand-white/5
                             `}
                         >
                             <div className="flex items-start justify-between mb-4">
-                                <div className={`p-4 rounded-2xl transition-colors duration-300 ${selectedId === service.id ? "bg-brand-gold text-brand-black" : "bg-brand-white/5 text-brand-gold"}`}>
+                                <div className="p-4 rounded-2xl transition-colors duration-300 bg-brand-white/5 text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-black">
                                     <service.icon className="w-8 h-8" />
                                 </div>
-                                <div className={`p-2 rounded-full border border-brand-white/10 transition-transform duration-300 ${selectedId === service.id ? "rotate-90 bg-brand-white/10" : "group-hover:translate-x-1"}`}>
+                                <div className="p-2 rounded-full border border-brand-white/10 transition-transform duration-300 group-hover:translate-x-1">
                                     <ChevronRight className="w-5 h-5 text-brand-gray-300" />
                                 </div>
                             </div>
 
                             <h3 className="text-2xl font-heading font-bold text-white mb-2">{service.title}</h3>
-                            <p className="text-brand-gray-300 mb-4">{service.shortDesc}</p>
+                            <p className="text-brand-gray-300 mb-6">{service.shortDesc}</p>
 
-                            <AnimatePresence>
-                                {selectedId === service.id && (
-                                    <motion.div
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: "auto" }}
-                                        exit={{ opacity: 0, height: 0 }}
-                                        className="border-t border-brand-white/10 pt-6 mt-6"
-                                    >
-                                        <p className="text-brand-gray-100 leading-relaxed mb-6">{service.fullDesc}</p>
+                            <ul className="mb-8 space-y-2">
+                                {service.benefits.slice(0, 2).map((benefit) => (
+                                    <li key={benefit} className="flex items-center gap-2 text-sm text-brand-gray-300">
+                                        <CheckCircle2 className="w-4 h-4 text-brand-gold" />
+                                        <span>{benefit}</span>
+                                    </li>
+                                ))}
+                            </ul>
 
-                                        <div className="grid grid-cols-2 gap-3">
-                                            {service.benefits.map((benefit) => (
-                                                <div key={benefit} className="flex items-center gap-2 text-sm text-brand-gray-300">
-                                                    <CheckCircle2 className="w-4 h-4 text-brand-gold" />
-                                                    <span>{benefit}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <button className="mt-8 w-full py-3 rounded-xl bg-brand-white/5 hover:bg-brand-gold hover:text-brand-black border border-brand-white/10 hover:border-brand-gold transition-all font-medium text-white text-sm">
-                                            Learn more about {service.title}
-                                        </button>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
+                            <a href={`/services/${service.id === "custom" ? "custom-development" : service.id === "aimodels" ? "chatbots" : service.id}`} className="block w-full text-center py-3 rounded-xl bg-brand-white/5 hover:bg-brand-gold hover:text-brand-black border border-brand-white/10 hover:border-brand-gold transition-all font-medium text-white text-sm">
+                                Learn more about {service.title}
+                            </a>
                         </motion.div>
                     ))}
                 </div>

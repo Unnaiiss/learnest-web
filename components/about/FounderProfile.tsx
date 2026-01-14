@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const FounderProfile = () => {
     return (
-        <section className="py-24 px-6 relative">
+        <section id="founder" className="py-24 px-6 relative">
             {/* Background Accent */}
             <div className="absolute right-0 bottom-0 w-1/2 h-1/2 bg-brand-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -43,10 +43,10 @@ export const FounderProfile = () => {
                             </div>
 
                             <div className="flex items-center justify-center md:justify-start gap-4">
-                                <Link href="#" className="p-3 rounded-full bg-brand-white/5 hover:bg-brand-gold hover:text-brand-black transition-all text-white">
+                                <Link href="https://www.linkedin.com/company/learnestml/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-brand-white/5 hover:bg-brand-gold hover:text-brand-black transition-all text-white">
                                     <Linkedin className="w-5 h-5" />
                                 </Link>
-                                <Link href="#" className="p-3 rounded-full bg-brand-white/5 hover:bg-brand-gold hover:text-brand-black transition-all text-white">
+                                <Link href="https://www.instagram.com/learnest.in" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-brand-white/5 hover:bg-brand-gold hover:text-brand-black transition-all text-white">
                                     <Instagram className="w-5 h-5" />
                                 </Link>
                             </div>

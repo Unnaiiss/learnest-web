@@ -23,15 +23,22 @@ export const Footer = () => {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        {["Twitter", "LinkedIn", "Instagram"].map((item) => (
-                            <Link
-                                key={item}
-                                href="#"
-                                className="text-sm font-medium text-brand-gray-300 hover:text-white transition-colors"
-                            >
-                                {item}
-                            </Link>
-                        ))}
+                        <Link
+                            href="https://www.linkedin.com/company/learnestml/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-brand-gray-300 hover:text-white transition-colors"
+                        >
+                            LinkedIn
+                        </Link>
+                        <Link
+                            href="https://www.instagram.com/learnest.in"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-brand-gray-300 hover:text-white transition-colors"
+                        >
+                            Instagram
+                        </Link>
                     </div>
                 </div>
 
