@@ -8,7 +8,7 @@ export const MissionVision = () => {
         <section className="py-32 px-6 relative z-10">
             <div className="container mx-auto max-w-6xl relative">
                 {/* Subtle Divider Line (Desktop only) */}
-                <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-brand-gold/20 to-transparent -translate-x-1/2" />
+                <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-violet-500/20 to-transparent -translate-x-1/2" />
 
                 <div className="grid md:grid-cols-2 gap-16 md:gap-32 items-start">
                     {/* Mission Section */}
@@ -19,12 +19,12 @@ export const MissionVision = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="relative"
                     >
-                        <div className="mb-8 inline-flex items-center gap-3 text-brand-gold">
+                        <div className="mb-8 inline-flex items-center gap-3 text-violet-500">
                             <Target className="w-5 h-5" />
                             <span className="text-xs uppercase tracking-[0.2em] font-medium">Mission</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-8 leading-tight">
-                            To bridge the gap between <span className="text-brand-gold">AI innovation</span> and reality.
+                            To bridge the gap between <span className="text-violet-500">AI innovation</span> and reality.
                         </h2>
                         <p className="text-brand-gray-300 leading-relaxed text-lg max-w-lg">
                             We provide accessible, high-quality AI education and cutting-edge solutions

@@ -1,7 +1,7 @@
 import { AboutHero } from "@/components/about/AboutHero";
 import { MissionVision } from "@/components/about/MissionVision";
-import { TeamGrid } from "@/components/about/TeamGrid";
-import { AboutCTA } from "@/components/about/AboutCTA";
+import { MeetTeam } from "@/components/about/MeetTeam";
+import { ReviewsSection } from "@/components/about/ReviewsSection";
 
 export const metadata = {
     title: "About Us | LEARNEST",
@@ -10,16 +10,15 @@ export const metadata = {
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-brand-black overflow-hidden relative">
+        <div className="min-h-screen bg-brand-black relative">
             {/* Global Background Ambient */}
             <div className="fixed inset-0 pointer-events-none">
-                <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-brand-gray/10 to-transparent opacity-50" />
             </div>
 
             <AboutHero />
             <MissionVision />
-            <TeamGrid />
-            <AboutCTA />
+            <MeetTeam />
+            <ReviewsSection />
         </div>
     );
 }

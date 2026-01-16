@@ -1,7 +1,7 @@
 import { ServicesHero } from "@/components/services/ServicesHero";
 import { ServicesList } from "@/components/services/ServicesList";
 import { WhyChoose } from "@/components/services/WhyChoose";
-import { ServicesCTA } from "@/components/services/ServicesCTA";
+
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
@@ -27,9 +27,7 @@ export default function ServicesPage() {
                 <WhyChoose />
             </ScrollReveal>
 
-            <ScrollReveal delay={0.1}>
-                <ServicesCTA />
-            </ScrollReveal>
+
         </div>
     );
 }

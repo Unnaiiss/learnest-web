@@ -7,7 +7,7 @@ export const Header = () => {
             <div className="container mx-auto px-6 h-20 flex items-center justify-between">
                 <Link href="/" className="text-2xl font-heading font-bold tracking-wider text-white">
                     LEARNEST
-                    <span className="text-brand-gold">.</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-white">.</span>
                 </Link>
                 <nav className="hidden md:flex items-center gap-8">
                     {["Home", "News", "Services", "About"].map((item) => (
